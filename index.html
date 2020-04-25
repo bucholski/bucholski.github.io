@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="calculator.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="calcWrapper">
+  <div id="calcScreen">
+    <input id="holdingArea" type="button" disabled=true name="screen" value="">
+    <input id="mainOutput" type="button" maxlength="14" disabled=true name="screen" value=0>
+  </div>
+  <div id="calcNumbers">
+    <div class="calcButton"><input type=button onclick="calcInsertNum(1)" value="1"></div>
+    <div class="calcButton"><input type=button onclick="calcInsertNum(2)" value="2"></div>
+    <div class="calcButton"><input type=button onclick="calcInsertNum(3)" value="3"></div>
+    <div class="calcButton"><input type=button onclick="calcInsertNum(4)" value="4"></div>
+    <div class="calcButton"><input type=button onclick="calcInsertNum(5)" value="5"></div>
+    <div class="calcButton"><input type=button onclick="calcInsertNum(6)" value="6"></div>
+    <div class="calcButton"><input type=button onclick="calcInsertNum(7)" value="7"></div>
+    <div class="calcButton"><input type=button onclick="calcInsertNum(8)" value="8"></div>
+    <div class="calcButton"><input type=button onclick="calcInsertNum(9)" value="9"></div>
+    <div class="calcButton"><input type=button onclick="calcInsertNum(0)" value="0"></div>
+    <div class="calcButton"><input type=button onclick="calcInsertPoint()" value="."></div>
+  </div>
+  <div id="calcMath">
+    <div class="calcButton"><input type=button onclick="calcClearScreen()" value="C"></div>
+    <div class="calcButton"><input type=button onclick="calcEqualsButton()" value="="></div>
+    <div class="calcButton"><input type=button onclick="calcAdditionButton()" value="&plus;"></div>
+    <div class="calcButton"><input type=button onclick="calcSubstractionButton()" value="&minus;"></div>
+    <div class="calcButton"><input type=button onclick="calcMultiplicationButton()" value="&times;"></div>
+    <div class="calcButton"><input type=button onclick="calcDivisionButton()" value="&divide;"></div>
+    <div class="calcButton"><input type=button value="&plus;/&minus;"></div>
+    <div class="calcButton"><input type=button value=""></div>
+  </div>
+</div>
+</body>
+</html>

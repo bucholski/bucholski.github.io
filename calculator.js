@@ -124,6 +124,7 @@ function calcAdditionButton() {
     currentTask = 1;
     inProgress = calcSetA();
     calcClearMain();
+    calcShowProgress(inProgress);
   }
   else {
     calcEquals();
@@ -140,6 +141,7 @@ function calcSubstractionButton() {
     currentTask = 2;
     inProgress = calcSetA();
     calcClearMain();
+    calcShowProgress(inProgress);
   }
   else {
     calcEquals();
@@ -164,6 +166,7 @@ function calcMultiplicationButton() {
     currentTask = 3;
     inProgress = calcSetA();
     calcClearMain();
+    calcShowProgress(inProgress);
   }
   else {
     calcEquals();
@@ -188,6 +191,7 @@ function calcDivisionButton() {
     currentTask = 4;
     inProgress = calcSetA();
     calcClearMain();
+    calcShowProgress(inProgress);
   }
   else {
     calcEquals();
@@ -208,4 +212,10 @@ function calcDivision() {
   inProgress = Number(Number(b/a).toFixed(12)); //manage point precision
   calcUpdateScreens(inProgress);
   }
+}
+
+function calcNegative() {
+  var a = calcSetA();
+  a *= -1;
+  calcUpdateScreens(a);
 }

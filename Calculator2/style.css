@@ -1,0 +1,29 @@
+body {
+  background-color: black;
+}
+
+#wrapper{ 
+  display: flexbox;
+  height: 90vh;
+  width: 30vw;
+  background-color: gray;
+}
+
+#history {
+  background-color: white;
+  height: 30%;
+}
+
+#output {
+  background-color: #eeeef6;
+  height: 30%;
+}
+
+
+#input-grid {
+  display: grid;
+
+  background-color: white;
+  height: 40%;
+  bottom: 0px;
+}

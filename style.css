@@ -1,5 +1,6 @@
 * {
   font-family: 'dejavu sans';
+  box-sizing: border-box;
 }
 
 input:focus {
@@ -36,11 +37,11 @@ p {
   position: relative;
   background-color: #ccccee;
   padding: 3vw;
-  font-size: 3vh;
   text-align: center;
+  
 }
 
-.gridItem > input {
+.gridItem > button {
   position: absolute;
   top: 0;
   left: 0;
@@ -53,6 +54,8 @@ p {
   -moz-user-select: none;
   -webkit-user-select: none;
   color: black;
+  font-size: 2vh;
+
 }
 
 input:focus {

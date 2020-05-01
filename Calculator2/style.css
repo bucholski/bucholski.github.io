@@ -4,9 +4,15 @@ body {
 
 #wrapper{ 
   display: flexbox;
-  height: 90vh;
-  width: 30vw;
+  height: 97vh;
+  width: 100%;
   background-color: gray;
+}
+
+@media only screen and (min-width: 1200px) {
+  #wrapper {
+    width: 33%;
+  }
 }
 
 #history {

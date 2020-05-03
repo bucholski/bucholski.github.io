@@ -3,13 +3,12 @@ body {
 }
 
 #wrapper{ 
-  display: flexbox;
-  height: 97vh;
+  height: 95vh;
   width: 100%;
   background-color: gray;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 2600px) {
   #wrapper {
     width: 33%;
   }
@@ -25,11 +24,24 @@ body {
   height: 30%;
 }
 
-
 #input-grid {
   display: grid;
-
+  padding: 2%;
+  /* need to get better organisation for buttons
+  possibly use flex instead  */
+  grid-template-columns: 14% 14% 14% 14% 14% 14% 14% ;
+  grid-template-rows: 10vh 10vh 10vh;
   background-color: white;
   height: 40%;
   bottom: 0px;
+}
+
+#input-grid > button
+{
+  /* width: 10vh; */
+  /* height: 10vh; */
+  background-color: white;
+  border: solid 1px #ccccff;
+  font-size: 4vh;
+  color: lightskyblue;
 }

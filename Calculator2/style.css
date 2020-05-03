@@ -26,11 +26,10 @@ body {
 
 #input-grid {
   display: grid;
-  padding: 2%;
   /* need to get better organisation for buttons
   possibly use flex instead  */
-  grid-template-columns: 14% 14% 14% 14% 14% 14% 14% ;
-  grid-template-rows: 10vh 10vh 10vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   background-color: white;
   height: 40%;
   bottom: 0px;
@@ -43,5 +42,5 @@ body {
   background-color: white;
   border: solid 1px #ccccff;
   font-size: 4vh;
-  color: lightskyblue;
+  color: rgb(80, 186, 252);
 }

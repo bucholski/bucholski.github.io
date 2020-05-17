@@ -1,13 +1,11 @@
 * {
   padding: 0;
   margin: 0;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
 
 body {
   background-color: rgb(255, 255, 255);
-  padding: none;
-  margin: none;
 }
 
 #wrapper{ 
@@ -60,7 +58,7 @@ body {
 
 #input-grid button {
   border: solid 1px #ccccff;
-  font-size: 4vh;
+  font-size: 3.2vh;
   color: rgb(80, 186, 252);
 }
 
@@ -70,4 +68,8 @@ body {
 
 #inputButtons > button {
   background-color: white;
+}
+
+button > span {
+  font-size: 2.5vh;
 }

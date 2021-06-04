@@ -1,0 +1,23 @@
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cake {
+  height: 250px;
+  width: 250px;
+
+  background-color: plum;
+  margin: 20px;
+}
+
+.foodText {
+  height: 50px;
+  background-color: powderblue;;
+}
+
+button {
+  margin: 50px;
+}

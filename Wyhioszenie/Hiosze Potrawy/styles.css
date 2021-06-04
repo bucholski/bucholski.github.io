@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  font-family: serif;
+  font-style: italic;
 }
 
 body {
@@ -61,6 +63,5 @@ button:active {
 }
 
 h1 {
-  font-family: serif;
-  font-style: italic;
+
 }

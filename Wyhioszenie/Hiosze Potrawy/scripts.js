@@ -1,7 +1,7 @@
-const mainDish = ['Śmieci', 'Grohek', 'Knyszka', 'Kanapeczka', 'Pierożek'];
-const sauce = ['porzeczkowym', 'z posoki', 'lepkim', 'suchym', 'własnym', 'z pięt', 'z kakutasa', 'beszamelowym', 'znalezionym na śmietniku'];
-const side = ['paprochami', 'niespodzianką', 'ziemniaczkami', 'łodyżką', 'próchnem', 'truchłem', 'listkiem', 'listkami', 'paćką', 'pośladkami', 'nóżkami', 'napletkiem', 'jarzębinką'];
-const drinks = ['pićko', 'hiosza woda', 'hiosze mleko', '"woda"', 'sok z jarzębinki', 'herbatka z listkami', 'kompot z hujoha', 'sucha woda', 'wywar leśny'];
+const mainDish = ['Specjał', 'Kaszka', 'Śmieci', 'Grohek', 'Knyszka', 'Kanapeczka', 'Pierożek', 'Przekładaniec', 'Rolada'];
+const sauce = ['porzeczkowym', 'z posoki', 'lepkim', 'suchym', 'własnym', 'z pięt', 'z kakutasa', 'beszamelowym', 'znalezionym na śmietniku', 'mokrym', 'morskim', 'Szefa Kuchni'];
+const side = ['szczypiorem', 'kaszką', 'paprochami', 'niespodzianką', 'ziemniaczkami', 'łodyżką', 'próchnem', 'truchłem', 'listkiem', 'listkami', 'paćką', 'pośladkami', 'nóżkami', 'napletkiem', 'jarzębinką'];
+const drinks = ['woda po ziemniakach', 'pićko', 'hiosza woda', 'hiosze mleko', '"woda"', 'sok z jarzębinki', 'herbatka z listkami', 'kompot z hujoha', 'sucha woda', 'wywar leśny', '"sok" z "owoców"'];
 const button = document.getElementById(`button`);
 var foodText = document.getElementById(`foodText`);
 button.addEventListener("click", prepareFood);
@@ -40,5 +40,6 @@ function prepareFood() {
   randomizeFood(sauce);
   addFoodText(', a do picia ');
   randomizeFood(drinks);
+  addFoodText('.');
 }
 

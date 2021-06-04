@@ -17,12 +17,13 @@ body {
   margin: 10px;
 }
 
-.cake {
+.food {
   height: 250px;
   width: 250px;
-
+  border-radius: 100%;
   background-color: whitesmoke;
   margin: 20px;
+ 
 }
 
 .foodText {

@@ -13,7 +13,7 @@ body {
   align-items: center;
   flex-direction: column;
   border: 5px double coral;
-  /* width: 50%; */
+  height:95vh;
   margin: 10px;
 }
 
@@ -26,11 +26,12 @@ body {
 }
 
 .foodText {
-  height: 50px;
+  height: 100px;
   /* background-color: powderblue; */
   font-size: 25px;
   font-style: italic;
   font-family: serif;
+  text-align: center;
 }
 
 button {

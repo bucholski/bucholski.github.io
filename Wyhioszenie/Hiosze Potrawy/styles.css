@@ -1,23 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: beige;
+  margin: auto;
+}
+
 .flex {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border: 5px double coral;
+  /* width: 50%; */
+  margin: 10px;
 }
 
 .cake {
   height: 250px;
   width: 250px;
 
-  background-color: plum;
+  background-color: whitesmoke;
   margin: 20px;
 }
 
 .foodText {
   height: 50px;
-  background-color: powderblue;;
+  /* background-color: powderblue; */
+  font-size: 25px;
+  font-style: italic;
+  font-family: serif;
 }
 
 button {
-  margin: 50px;
+
+  background-color: black;
+  border-radius: 10px;
+  border: 0px;
+  box-shadow: none;
+  color: white;
+
+  font-family: serif;
+  font-style: italic;
+  font-size: 20px;
+  
+  height: 50px;
+  width: 100px;
+  margin: 20px;
+}
+
+button:hover {
+  background-color: #222222
+}
+
+button:active {
+  background-color: #333333;
+}
+
+h1 {
+  font-family: serif;
+  font-style: italic;
 }

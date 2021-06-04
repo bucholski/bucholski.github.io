@@ -1,7 +1,8 @@
 * {
   box-sizing: border-box;
-  font-family: serif;
   font-style: italic;
+  font-family: serif;
+  text-align: center;
 }
 
 body {
@@ -15,26 +16,33 @@ body {
   align-items: center;
   flex-direction: column;
   border: 5px double coral;
-  height:95vh;
+  height: 90vh;
   margin: 10px;
 }
 
-.food {
-  height: 250px;
-  width: 250px;
-  border-radius: 100%;
-  background-color: whitesmoke;
-  margin: 20px;
- 
+.foodPic {
+  height: 200px;
+  width: 200px;
+  border: 5px double coral;
+  border-radius: 50%;
+  /* background-color: whitesmoke; */
+  overflow: hidden;
+}
+
+.foodPic img {
+  /* padding-right: 100px; */
+  width: 350px;
+  margin-top: -50px;
+  margin-left: -70px;
 }
 
 .foodText {
-  height: 100px;
+  height: 150px;
   /* background-color: powderblue; */
   font-size: 25px;
-  font-style: italic;
-  font-family: serif;
-  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* overflow: hidden; */
 }
 
 button {
@@ -45,8 +53,6 @@ button {
   box-shadow: none;
   color: white;
 
-  font-family: serif;
-  font-style: italic;
   font-size: 20px;
   
   height: 50px;
@@ -62,6 +68,3 @@ button:active {
   background-color: #333333;
 }
 
-h1 {
-
-}

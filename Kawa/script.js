@@ -21,26 +21,70 @@ function logging(string) {
   text.innerHTML = string;
 }
 
+console.log(steps.item(0).index);
+// steps.forEach(element => console.log(element.id));
+
+
+
 //hide current step, show next step
 function hideAndShowNext(objToHide, choice) { 
+  
   objToHide.classList.add('hidden');
-  if(currentStep < steps.length) {
-    objToShow = document.getElementById(steps[currentStep].id);
-    objToShow.classList.remove('hidden');
-  } else {
-    return;
+  switch(objToHide.id){
+  case `stepStart`:
+    if (choice.id == `espresso`) {
+      document.getElementById('stepEsp-milk').classList.remove('hidden');
+      break;
+    } else if (choice.id =='nonespresso') {
+      document.getElementById('stepAlt-method').classList.remove('hidden');
+      break;
+    }
+  break;
+  case `stepEsp-milk`:
+    if (choice.id == `black`) {
+      document.getElementById('stepEsp-black-kind').classList.remove('hidden');
+      break;
+    } else if (choice.id =='milk') {
+      document.getElementById('stepEsp-milk-kind').classList.remove('hidden');
+      break;
+    }
+  default:
+    if (objToHide.classList.contains('finish')) {
+      break;
+    } else { 
+      for (let i = 0; i<steps.length; i++) {
+        if (objToHide.id == steps.item(i).id) {
+          document.getElementById(steps.item(i+1).classList.remove('hidden'));
+        }
+      }
+    }
+
+
   }
 }
 
+
+
+//function hideAndShowNext(objToHide, choice) { 
+//   objToHide.classList.add('hidden');
+//   if(currentStep < steps.length) {
+//     objToShow = document.getElementById(steps[currentStep].id);
+//     objToShow.classList.remove('hidden');
+//   } else {
+//     return;
+//   }
+// }
+
+
 //what happens on button press
 function checking(event){
-  if (event.target.tagName != `BUTTON` || this.id !== steps[currentStep].id) {
+  if (event.target.tagName != `BUTTON`) {
     let temp = text.innerHTML;
     logging('press a button to make a choice');
     setTimeout(function(){logging(temp)}, 3000);
     return;
   } 
-  console.log(this.id + steps[currentStep].id)
+  // console.log(this.id + steps[currentStep].id)
   let getInfo = event.target.dataset;
   getInfo.espresso && (coffee.espresso = getInfo.espresso);
 
@@ -48,8 +92,7 @@ function checking(event){
   getInfo.method && (coffee.method = getInfo.method);
   getInfo.pl && (coffee.pl = getInfo.pl);
   } else if (coffee.espresso == "espresso") {
-  logging(`espresso coffee not implemented yet`);
-  return;
+ 
   }
 
   currentStep++;

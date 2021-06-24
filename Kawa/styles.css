@@ -1,0 +1,14 @@
+body {
+  background-color: #333333;
+
+}
+
+.text {
+  margin: 10px 10px;
+  background-color: black;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}

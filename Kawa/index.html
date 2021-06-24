@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <meta charset="utf-8">
+
+<head>
+  <link href="styles.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kawa</title>
+</head>
+<body>
+  <div class="flex-wrapper">
+    <h1>Welcome to our Cafe</h1>
+    <div class="text" id="text">Debug screen</div> 
+    <!-- break to be deleted after styling -->
+    <br> 
+    <div id="stepStart" class="stepBox">
+      <button class="choiceButton" id="nonespresso" data-espresso="alt">Metody Alternatywne</button>
+      <button class="choiceButton" id="espresso" data-espresso="espresso">Na bazie espresso</button>
+    </div>
+    <div id="stepAlt-method" class="stepBox hidden">
+      <button class="choiceButton" id="drip" data-method="drip"> Drip</button>
+      <button class="choiceButton" id="aeropress" data-method="aeropress">Aeropress</button>
+    </div>
+    <div id="stepAlt-Origin" class="stepBox hidden">
+      <button class="choiceButton" id="kenya" data-pl="Kenia">Kenia</button>
+      <button class="choiceButton" id="colombia" data-pl="Kolumbia">Kolumbia</button>
+    </div>
+    <div id="stepEsp-milk" class="stepBox hidden">
+      <button class="choiceButton" id="black" data-foo="foo"> Foo</button>
+      <button class="choiceButton" id="milk" data-foo="foo">Foo</button>
+    </div>
+    <div id="stepEsp-milk-kind" class="stepBox hidden">
+      <button class="choiceButton" id="flatwhite" data-foo="foo"> Foo</button>
+      <button class="choiceButton" id="latte" data-foo="foo">Foo</button>
+    </div>
+    <div id="stepEsp-black-kind" class="stepBox hidden">
+      <button class="choiceButton" id="shot" data-foo="foo"> Foo</button>
+      <button class="choiceButton" id="doppio" data-foo="foo">Foo</button>
+    </div>
+    <div id="stepEsp-black-origin" class="stepBox hidden">
+      <button class="choiceButton" id="" data-foo="foo"> Foo</button>
+      <button class="choiceButton" id="" data-foo="foo">Foo</button>
+    </div>
+    <!-- <div id="foo" class="stepBox hidden">
+      <button class="choiceButton" id="" data-foo="foo"> Foo</button>
+      <button class="choiceButton" id="" data-foo="foo">Foo</button>
+    </div> -->
+  </div>
+  
+  
+<script src="script.js"></script>
+</body>
+</html>

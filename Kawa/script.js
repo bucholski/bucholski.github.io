@@ -14,23 +14,18 @@ const text = document.getElementById("text");
 function setup(array) {
   array.forEach(element => document.getElementById(element.id).addEventListener("click", checking));
 }
-
 setup(steps);
+
 //debug
 function logging(string) {
   text.innerHTML = string;
 }
 
-console.log(steps.item(0).index);
-// steps.forEach(element => console.log(element.id));
-
-
-
 //hide current step, show next step
 function hideAndShowNext(objToHide, choice) { 
-  
   objToHide.classList.add('hidden');
   switch(objToHide.id){
+//first I use cases to handle choices that alter the path
   case `stepStart`:
     if (choice.id == `espresso`) {
       document.getElementById('stepEsp-milk').classList.remove('hidden');
@@ -48,6 +43,8 @@ function hideAndShowNext(objToHide, choice) {
       document.getElementById('stepEsp-milk-kind').classList.remove('hidden');
       break;
     }
+
+//this handles choices that don't alter the path
   default:
     if (objToHide.classList.contains('finish')) {
       break;
@@ -58,8 +55,6 @@ function hideAndShowNext(objToHide, choice) {
         }
       }
     }
-
-
   }
 }
 
@@ -90,15 +85,19 @@ function checking(event){
 
   if (coffee.espresso == "alt") {
   getInfo.method && (coffee.method = getInfo.method);
-  getInfo.pl && (coffee.pl = getInfo.pl);
+  getInfo.origin && (coffee.origin = getInfo.origin);
   } else if (coffee.espresso == "espresso") {
- 
+    getInfo.milk && (coffee.milk = getInfo.milk);
+    getInfo.kind && (coffee.kind = getInfo.kind);
+    getInfo.type && (coffee.type = getInfo.type);
+    getInfo.origin && (coffee.origin = getInfo.origin);
   }
 
   currentStep++;
   hideAndShowNext(this, event.target);
-  if (currentStep >= steps.length) {
-    logging(`${coffee.pl} na ${coffee.method}, zgadza się?`);
+  if (this.classList.contains('finish')) {
+    logging(`${coffee.origin} na ${coffee.method}, zgadza się?`);
+    console.log(Object.values(coffee));
   }
 }
 

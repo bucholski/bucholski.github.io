@@ -1,0 +1,1 @@
+Attempt of copying looks and functionality of calculator app in my Samsung Tab S2, thwarted by the destruction of the said tablet. Oh well.

@@ -1,0 +1,172 @@
+$grayish-blue: hsl(237, 18%, 59%);
+$soft-red: hsl(345, 95%, 68%);
+$white: hsl(0, 0%, 100%);
+$bottom-half: hsla(111, 100%, 100%, .05);
+$desaturated-blue: hsl(236, 21%, 26%);
+$dark-blue: hsl(240, 21.4%, 22%);
+$very-dark-blue: hsl(235, 16%, 14%);
+$black-blue: hsl(234, 17%, 12%);
+$black-purple: hsl(272, 21.1%, 13.9%);
+
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+body, html, h1 {
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+
+}
+
+body {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: 'Red Hat Text', sans-serif;
+  background-image: url("images/bg-stars.svg"),
+  linear-gradient($black-blue,$black-purple);
+  min-height: 500px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;  
+}
+
+.title {
+  padding: 80px 0 60px;
+  text-align: center;
+  color: $white;
+  letter-spacing: 7px;
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.time-block {
+  position: relative;
+  width: min(10vw, 150px);
+  height: min(10vw, 150px);
+  min-width: 70px;
+  min-height: 70px;
+  
+  border-radius: 5px;
+  
+  box-shadow: 0 6px 0 -1px $black-blue;
+}
+
+.time-block__full-block {
+  position: relative;
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
+  background-color: $dark-blue;
+  overflow: hidden;
+}
+
+.time-block__bottom-half {
+  position: absolute;
+  top:50%;
+  bottom: 0;
+  left: 0; right: 0;
+  background-color: $bottom-half;
+}
+
+.time-block__value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  font-size: max(35px, 4.5vw);
+  color: $soft-red;
+}
+
+.time-block__description {
+  padding-top: 15px;
+  font-size: min(calc(7px + 0.5vw), 20px);
+  color: $grayish-blue;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+$hinge-diameter: max(6px, 1vw);
+.time-block__hinges {
+  position: absolute;
+  top: calc($hinge-diameter / -2);
+  width: $hinge-diameter;
+  height: $hinge-diameter;
+  border-radius: 999px;
+  background-color: $black-blue;
+}
+
+.time-block__hinges--hinge-left {
+  left: calc($hinge-diameter / -2);
+}
+
+.time-block__hinges--hinge-right {
+  right: calc($hinge-diameter / -2);
+}
+
+.background-pattern img {
+  height: 100%;
+  width: 100%;
+}
+
+.background-pattern {
+  position: fixed;
+  height: 25%;
+  width: 100%;
+  bottom: 0;
+  min-width: 1440px;
+  min-height: 100px;
+  width: 100%;
+  overflow: hidden;
+  z-index: -10;
+}
+
+//footer
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.social svg {
+  fill: $grayish-blue;
+}
+.social svg:hover {
+  fill: $soft-red; 
+}
+
+.attribution {
+   font-size: 11px; text-align: center;
+}
+
+.attribution a {
+   color: hsl(228, 45%, 44%);
+  }

@@ -1,6 +1,6 @@
 {
-  "homepage": "https://bucholski.github.io/learning_projects/react-rps",
-  "name": "react-rps",
+  "homepage": "https://bucholski.github.io/learning_projects/rps-react",
+  "name": "rps-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,7 +14,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -b test -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

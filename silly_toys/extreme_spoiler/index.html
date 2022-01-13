@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoiler alert!!111one</title>
+    <style>
+        body {
+            background-color: #333;
+        }
+
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+            /* flex-wrap: nowrap; */
+            align-items: center;
+            justify-content: center;
+            background-color: #9FCC2E;
+            width: 100%;
+        }
+
+        .input-text {
+            resize: none;
+        }
+
+        .process-btn {
+            background-color: #2B4141;
+            color: #EA3788;
+        }
+
+        .output-text, .input-text, .process-btn {
+            display: block;
+            width: 100%;
+            min-height: 50px;
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-column">
+        <textarea class="input-text"></textarea>
+        <button class="process-btn">Smosh me</button>
+        <textarea readonly class="output-text"></textarea>
+    </form>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

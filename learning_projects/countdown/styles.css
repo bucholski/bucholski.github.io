@@ -1,0 +1,157 @@
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+body, html, h1 {
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+}
+
+body {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "Red Hat Text", sans-serif;
+  background-image: url("images/bg-stars.svg"), linear-gradient(#191a24, #241c2b);
+  min-height: 500px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.title {
+  padding: 80px 0 60px;
+  text-align: center;
+  color: white;
+  letter-spacing: 7px;
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.time-block {
+  position: relative;
+  width: min(10vw, 150px);
+  height: min(10vw, 150px);
+  min-width: 70px;
+  min-height: 70px;
+  border-radius: 5px;
+  box-shadow: 0 6px 0 -1px #191a24;
+}
+
+.time-block__full-block {
+  position: relative;
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
+  background-color: #2c2c44;
+  overflow: hidden;
+}
+
+.time-block__bottom-half {
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.time-block__value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: max(35px, 4.5vw);
+  color: #fb6087;
+}
+
+.time-block__description {
+  padding-top: 15px;
+  font-size: min(7px + 0.5vw, 20px);
+  color: #8486a9;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.time-block__hinges {
+  position: absolute;
+  top: calc(max(6px, 1vw) / -2);
+  width: max(6px, 1vw);
+  height: max(6px, 1vw);
+  border-radius: 999px;
+  background-color: #191a24;
+}
+
+.time-block__hinges--hinge-left {
+  left: calc(max(6px, 1vw) / -2);
+}
+
+.time-block__hinges--hinge-right {
+  right: calc(max(6px, 1vw) / -2);
+}
+
+.background-pattern img {
+  height: 100%;
+  width: 100%;
+}
+
+.background-pattern {
+  position: fixed;
+  height: 25%;
+  width: 100%;
+  bottom: 0;
+  min-width: 1440px;
+  min-height: 100px;
+  width: 100%;
+  overflow: hidden;
+  z-index: -10;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.social svg {
+  fill: #8486a9;
+}
+
+.social svg:hover {
+  fill: #fb6087;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=styles.css.map */

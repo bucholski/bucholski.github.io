@@ -1,0 +1,125 @@
+
+$paper-gradient: hsl(230, 89%, 65%);
+$scissors-gradient: hsl(40, 84%, 53%);
+$rock-gradient: hsl(349, 70%, 56%);
+$background-gradient: radial-gradient(circle at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+$dark-font: hsl(229, 25%, 31%);
+$light-font: #FFF;
+$score-text: hsl(229, 64%, 46%);
+$border-color: hsl(217, 16%, 45%);
+
+@use "gestures";
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap');
+
+@mixin default-border {
+  border: solid 3px $border-color;
+  border-radius: 8px;
+}
+
+@mixin btn-reset {
+  display: block;
+  border: none;
+  background-color: transparent;
+}
+
+.debug {
+  background-color:darkblue !important;
+}
+
+* {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  line-height: 1em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+body,html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: $background-gradient;
+  background-position: left;
+  color: $light-font;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  gap: 5%;
+}
+
+.title-box {
+  @include default-border;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 700px;
+  margin: 30px 30px;
+  padding: 10px clamp(10px, 2vw, 20px);
+  font-size: clamp(16px, 4.5vw, 25px);
+}
+
+.title-box__logo {
+  margin: 10px;
+}
+
+.title-box > * {
+  max-width: 33%;
+}
+
+.title-box__scoreboard {
+  padding: 8px calc(15px + 2vw);
+  background-color: $light-font;
+  border-radius: 8px;
+  color: $dark-font;
+  text-align: center;
+}
+
+.title-box__score-text {
+  font-weight: 700;
+  font-size: 0.7em;
+  color: $score-text;
+}
+
+.title-box__score-value {
+  letter-spacing: 0px;
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+// .hand-circle--grayed-out {
+//   backdrop-filter: ;
+// }
+
+.default-btn {
+  @include btn-reset;
+  @include default-border;
+  padding: 10px 40px;
+  color: $light-font;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 5px 0; 
+  
+  }
+.attribution a, .attribution a:visited { 
+  text-decoration: none;
+  color: hsl(228, 45%, 64%); 
+}
+
+@media only screen and (min-width:1024px) {
+  .rules-btn {
+    position: absolute;
+    bottom: 50px; right: 50px;
+  }
+}

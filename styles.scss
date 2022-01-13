@@ -1,0 +1,131 @@
+$font-stack: 'Quicksand', sans-serif;
+$primary-font-color: #131313;
+$primary-bg-color: #f9f9f9;
+$primary-border-color: #d3d3d3;
+$dark-bg-color: #131313;
+$dark-font-color: #f9f9f9;
+$template-color: #aaa;
+$small-width-font: 20px;
+$medium-width-font: 23px;
+$big-width-font: 26px;
+
+@use 'project-card';
+
+body, h1, h2, h3, h4, ul, p {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+
+html, body {
+  height: 100%;
+  font-family: $font-stack;
+  font-size: $small-width-font;
+  color: $primary-font-color;
+  background-color: $primary-bg-color;
+  text-align: center;
+}
+
+main {
+  margin: auto;
+  width: 85%;
+}
+
+.overall-flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  padding: 20px;
+}
+
+h1, h4, p {
+  text-align: center;
+  padding: 20px 0 30px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.technologies img {
+  height: 100px;
+}
+
+footer {
+  width: 100%;
+  padding: 10px 0;
+  background-color: $dark-bg-color;
+  text-align: right;
+  color: $dark-font-color;
+  .copy {
+    font-size: 14px;
+    padding: 0 20px;
+  }  
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    font-size: $medium-width-font;
+  }
+  .project-cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .project-cards-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  body {
+    font-size: $big-width-font;
+  }
+}
+
+@media (hover: hover) {
+  .projects .project-card:hover .project-card__description {
+    opacity: 1;
+  }
+  .project-card {
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .project-card__thumbnail, template {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%; 
+  }
+  .project-card__description {
+    position: absolute;
+    top: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+  } 
+  .project-card__ribbon {
+    display: none;
+  }
+}

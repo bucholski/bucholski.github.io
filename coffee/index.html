@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <meta charset="utf-8">
+
+<head>
+  <link href="styles.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kawa</title>
+</head>
+<body>
+  <div class="flex-wrapper">
+    <h1>Welcome to our Cafe</h1>
+    <div class="text" id="text">Debug screen</div> 
+    <!-- break to be deleted after styling -->
+    <br> 
+    <div id="stepStart" class="stepBox">
+      <button class="choiceButton" id="nonespresso" data-espresso="alt">Metody Alternatywne</button>
+      <button class="choiceButton" id="espresso" data-espresso="espresso">Na bazie espresso</button>
+    </div>
+    <div id="stepEsp-milk" class="stepBox hidden">
+      <button class="choiceButton" id="black" data-milk="black">Czarna</button>
+      <button class="choiceButton" id="milk" data-milk="milk">Z mlekiem</button>
+    </div>
+    <div id="stepEsp-milk-kind" class="stepBox milk hidden">
+      <button class="choiceButton" id="flatwhite" data-kind="flatwhite">Flat white</button>
+      <button class="choiceButton" id="latte" data-kind="latte">Latte</button>
+    </div>
+        <div id="stepEsp-milk-type" class="stepBox milk hidden finish">
+      <button class="choiceButton" id="oat" data-type="oat"> Owsiane</button>
+      <button class="choiceButton" id="soy" data-type="soy">Sojowe</button>
+    </div>
+    <div id="stepAlt-method" class="stepBox nonespresso hidden">
+      <button class="choiceButton" id="drip" data-method="drip"> Drip</button>
+      <button class="choiceButton" id="aeropress" data-method="aeropress">Aeropress</button>
+    </div>
+    <div id="stepAlt-origin" class="stepBox nonespresso hidden finish">
+      <button class="choiceButton" id="kenya" data-origin="kenya">Kenia</button>
+      <button class="choiceButton" id="colombia" data-origin="colombia">Kolumbia</button>
+    </div>
+    <div id="stepEsp-black-kind" class="stepBox black hidden">
+      <button class="choiceButton" id="shot" data-kind="shot"> Podwójne</button>
+      <button class="choiceButton" id="doppio" data-kind="doppio">Pojedyncze</button>
+    </div>
+    <div id="stepEsp-black-origin" class="stepBox black hidden finish">
+      <button class="choiceButton" id="" data-origin="brasil">Brazylia</button>
+      <button class="choiceButton" id="" data-origin="ethiopia">Etiopia</button>
+    </div>
+    <!-- <div id="foo" class="stepBox hidden">
+      <button class="choiceButton" id="" data-foo="foo"> Foo</button>
+      <button class="choiceButton" id="" data-foo="foo">Foo</button>
+    </div> -->
+  </div>
+  
+  
+<script src="script.js"></script>
+</body>
+</html>

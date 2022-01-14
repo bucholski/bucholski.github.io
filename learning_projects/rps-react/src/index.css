@@ -68,7 +68,7 @@
   background-color: gray;
   content: "";
   transform: translateZ(-1px);
-  box-shadow: inset 0 -5px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 -5px rgba(0, 0, 0, 0.0025);
 }
 
 .hand-circle__border--paper {
@@ -109,7 +109,7 @@ body, html {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 100vh;
+  min-height: 80vh;
   gap: 5%;
 }
 

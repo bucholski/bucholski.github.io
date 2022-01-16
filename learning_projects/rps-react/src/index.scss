@@ -8,6 +8,11 @@ $light-font: #FFF;
 $score-text: hsl(229, 64%, 46%);
 $border-color: hsl(217, 16%, 45%);
 
+$container-circle-ratio: 1.7; //also gap between circles
+$container-width: clamp(100px*$container-circle-ratio, 30vw, 140px*$container-circle-ratio);
+$circle-width: clamp(100px, calc($container-width/$container-circle-ratio),140px);
+$hand-circle-border: -15%;
+
 @use "gestures";
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap');
@@ -44,13 +49,17 @@ body,html {
   color: $light-font;
 }
 
+#root {
+  height: 100%;
+}
+
 .flex-column {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  min-height: 80vh;
-  gap: 5%;
+  min-height: calc($circle-width*6);
+  height: 100%;
 }
 
 .title-box {

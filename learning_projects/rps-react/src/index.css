@@ -94,7 +94,7 @@
   gap: clamp(80px, 20%, 150px);
 }
 
-.duel-container > * {
+.duel-container .hand-circle {
   position: relative;
   inset: 0;
   transform: scale(1.2);

@@ -101,6 +101,17 @@
   flex-shrink: 0;
 }
 
+.concealed {
+  opacity: 0.5;
+  background-color: #141539;
+  background-image: none;
+  box-shadow: none;
+}
+
+.concealed * {
+  visibility: hidden;
+}
+
 .debug {
   background-color: darkblue !important;
 }

@@ -5,6 +5,7 @@ import DuelContainer from './DuelContainer'
 
 const Step2 = ({ gesture, score, setScore }) => {
 
+  const [reveal, setReveal] = useState (0);
   const [enemyChoice, setEnemyChoice] = useState ('');
   const [outcome, setOutcome] = useState ('');
 
@@ -26,17 +27,23 @@ const Step2 = ({ gesture, score, setScore }) => {
       return('defeat');
     }
   }
+
+  function unveilEnemy() {
+    setTimeout(() => {    document.querySelector(".concealed").classList.remove("concealed"); 
+    setReveal(1);
+  }, 1000 )
+  }
+
   useEffect(() => {
     setEnemyChoice(rollEnemy);
   },[])
+  useEffect(()=>{ unveilEnemy()},[enemyChoice])
 
   useEffect(() => {
-    console.log('Select winner now:')
     setOutcome(selectWinner)
-  },[enemyChoice])
+  },[reveal])
 
   useEffect(() => {
-    console.log('222 hiohy')
     if (outcome == 'victory') { setScore(()=>score + 1)}
     else if (outcome == 'defeat') { setScore(()=>score - 1)}
   },[outcome])

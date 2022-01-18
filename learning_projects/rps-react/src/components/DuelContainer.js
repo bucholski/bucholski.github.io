@@ -9,7 +9,7 @@ const DuelContainer = ({ gesture, enemyChoice }) => {
     <>
     <div className="duel-container">
       <HandCircle gesture={gesture} />
-      <HandCircle gesture={enemyChoice} />
+      <HandCircle gesture={`${enemyChoice} concealed`} />
     </div>
     <Link to="./..">  
       <DefaultButton text="Play again" extraClass={"again-btn"} />

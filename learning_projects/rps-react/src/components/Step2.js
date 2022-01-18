@@ -13,31 +13,35 @@ const Step2 = ({ gesture, score, setScore }) => {
     let i = Math.floor(Math.random() * 3);
     return gestures[i];
   }
-    let result = "";
-
   function selectWinner() {
-    let choice = Object.values(gesture)
-    if (choice == enemyChoice)  { 
-      return('Tie');
-    } else if (choice == 'rock' && enemyChoice == 'scissors' || choice == 'paper' && enemyChoice == 'rock' || choice == 'scissors' && enemyChoice == 'paper') {
-      setScore((score)=> score += 1)
-      return('Victory');
-    } else if (choice == 'paper' && enemyChoice == 'scissors' || choice == 'scissors' && enemyChoice == 'rock' || choice == 'rock' && enemyChoice == 'paper') {
-      setScore((score)=>score -= 1) 
-      return('Defeat');
+    if (gesture == enemyChoice)  {
+      console.log('hioh');
+ 
+      return('tie');
+    } else if (gesture == 'rock' && enemyChoice == 'scissors' || gesture == 'paper' && enemyChoice == 'rock' || gesture == 'scissors' && enemyChoice == 'paper') {
+      // setScore((score)=> score += 1)
+      return('victory');
+    } else if (gesture == 'paper' && enemyChoice == 'scissors' || gesture == 'scissors' && enemyChoice == 'rock' || gesture == 'rock' && enemyChoice == 'paper') {
+      // setScore((score)=>score -= 1) 
+      return('defeat');
     }
   }
   useEffect(() => {
-    console.log('Roll enemy now:')
     setEnemyChoice(rollEnemy);
   },[])
 
   useEffect(() => {
     console.log('Select winner now:')
-    setOutcome(selectWinner);
+    setOutcome(selectWinner)
   },[enemyChoice])
 
-  return (
+  useEffect(() => {
+    console.log('222 hiohy')
+    if (outcome == 'victory') { setScore(()=>score + 1)}
+    else if (outcome == 'defeat') { setScore(()=>score - 1)}
+  },[outcome])
+
+return (
     <>
       <h1>{outcome}</h1>
       <DuelContainer gesture={gesture} enemyChoice={enemyChoice} />

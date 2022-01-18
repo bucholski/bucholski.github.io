@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 
 const DuelContainer = ({ gesture, enemyChoice }) => {
 
-  console.log( enemyChoice + ' in duel')
   return (
     <>
     <div className="duel-container">

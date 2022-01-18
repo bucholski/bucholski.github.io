@@ -10,7 +10,7 @@ const HandCircle = ({ gesture, setChoice, link }) => {
 
   return (
     <Link to={link}>
-      <button onClick={()=> setChoice({gesture})} className={`hand-circle hand-circle--${gesture}`}>
+      <button onClick={()=> setChoice(()=>gesture)} className={`hand-circle hand-circle--${gesture}`}>
         <div className={`hand-circle__border hand-circle__border--${gesture}`}></div>
       </button>
     </Link>

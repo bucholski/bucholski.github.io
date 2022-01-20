@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/learning_projects/rps-react-prod/static/css/main.8d3b088a.css",
-    "main.js": "/learning_projects/rps-react-prod/static/js/main.aa045e06.js",
+    "main.css": "/learning_projects/rps-react-prod/static/css/main.5ae13377.css",
+    "main.js": "/learning_projects/rps-react-prod/static/js/main.cddbac03.js",
     "static/js/787.e6c92180.chunk.js": "/learning_projects/rps-react-prod/static/js/787.e6c92180.chunk.js",
     "static/media/logo.svg": "/learning_projects/rps-react-prod/static/media/logo.a4a2b39fefcdb6a1a8088c4dba8f3d93.svg",
     "static/media/icon-paper.svg": "/learning_projects/rps-react-prod/static/media/icon-paper.8b57a6b108c1b8ae8293.svg",
     "index.html": "/learning_projects/rps-react-prod/index.html",
     "static/media/icon-scissors.svg": "/learning_projects/rps-react-prod/static/media/icon-scissors.3b1a5d7eb0b2f1fd3e95.svg",
     "static/media/icon-rock.svg": "/learning_projects/rps-react-prod/static/media/icon-rock.476e90a9646a87bb3645.svg",
-    "main.8d3b088a.css.map": "/learning_projects/rps-react-prod/static/css/main.8d3b088a.css.map",
-    "main.aa045e06.js.map": "/learning_projects/rps-react-prod/static/js/main.aa045e06.js.map",
+    "main.5ae13377.css.map": "/learning_projects/rps-react-prod/static/css/main.5ae13377.css.map",
+    "main.cddbac03.js.map": "/learning_projects/rps-react-prod/static/js/main.cddbac03.js.map",
     "787.e6c92180.chunk.js.map": "/learning_projects/rps-react-prod/static/js/787.e6c92180.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8d3b088a.css",
-    "static/js/main.aa045e06.js"
+    "static/css/main.5ae13377.css",
+    "static/js/main.cddbac03.js"
   ]
 }

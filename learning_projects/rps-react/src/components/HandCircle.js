@@ -1,16 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-const HandCircle = ({ gesture, setChoice, link }) => {
+const HandCircle = ({ gesture, setChoice, link, mod }) => {
 
-  // gesture = Object.values(gesture);
-
-  if (typeof gesture === 'object' ) { 
-    gesture = `${Object.values(gesture)}`;
-  }
 
   return (
     <Link to={link}>
-      <button onClick={()=> setChoice(()=>gesture)} className={`hand-circle hand-circle--${gesture}`}>
+      <button onClick={()=> setChoice(()=>gesture)} className={`hand-circle hand-circle--${gesture} ${mod}`}>
         <div className={`hand-circle__border hand-circle__border--${gesture}`}></div>
       </button>
     </Link>

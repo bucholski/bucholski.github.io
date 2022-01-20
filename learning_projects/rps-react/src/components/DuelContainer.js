@@ -3,17 +3,15 @@ import DefaultButton from './DefaultButton'
 import HandCircle from './HandCircle'
 import { Link } from 'react-router-dom'
 
-const DuelContainer = ({ gesture, enemyChoice }) => {
+const DuelContainer = ({ gesture, enemyChoice, playerMod, enemyMod }) => {
+
 
   return (
     <>
     <div className="duel-container">
-      <HandCircle gesture={gesture} />
-      <HandCircle gesture={`${enemyChoice} concealed`} />
+      <HandCircle gesture={gesture} mod={playerMod} />
+      <HandCircle gesture={enemyChoice} mod={enemyMod} />
     </div>
-    <Link to="./..">  
-      <DefaultButton text="Play again" extraClass={"again-btn"} />
-    </Link>
     </>
   )
 }

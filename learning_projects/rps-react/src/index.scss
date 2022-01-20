@@ -39,6 +39,10 @@ $hand-circle-border: -15%;
   text-transform: uppercase;
 }
 
+a {
+  text-decoration: none;
+}
+
 body,html {
   overflow-x: hidden;
   margin: 0;
@@ -113,7 +117,9 @@ body,html {
   color: $light-font;
   font-size: 1.1em;
   font-weight: 500;
-}
+  transform: translateZ(111px);
+
+  transform-style: preserve-3d;}
 
 .attribution {
   font-size: 11px;
@@ -126,9 +132,16 @@ body,html {
   color: hsl(228, 45%, 64%); 
 }
 
+.hidden {
+  position: absolute;
+  left: -9999vw;
+  visibility: hidden;
+}
+
 @media only screen and (min-width:1024px) {
   .rules-btn {
     position: absolute;
     bottom: 50px; right: 50px;
   }
 }
+

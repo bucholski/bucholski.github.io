@@ -10,8 +10,6 @@ function App() {
   const [choice, setChoice] = useState("");
   const [score, setScore] = useState(0);
 
-  useEffect(()=> {console.log(choice)}, [choice])
-
   return (
     <div className="flex-column">
       <Header score={score} />

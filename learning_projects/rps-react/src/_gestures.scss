@@ -6,6 +6,12 @@ $dark-font: hsl(229, 25%, 31%);
 $light-font: #FFF;
 $score-text: hsl(229, 64%, 46%);
 $border-color: hsl(217, 16%, 45%);
+$highlight-1: hsla(250,100,50,100%);
+$highlight-2: hsla(150,100,50,100%);
+$highlight-3: hsla(50,100,50,100%);
+
+$highlight-gradient: radial-gradient(circle, rgba(224, 255, 232, 0.1), rgba(255,255,224,0.1) 45%, rgba(255,255,224,0.06) 45%, rgba(255,255,224,0.06) 58%, rgba(255,255,224,0.03) 58%, rgba(255,255,224,0.03) 100%);
+
 
 $container-circle-ratio: 1.7; //also gap between circles
 $container-width: clamp(100px*$container-circle-ratio, 30vw, 140px*$container-circle-ratio);
@@ -60,6 +66,8 @@ $hand-circle-border: -15%;
     box-shadow: inset 0 5px rgba(0,0,0,0.2);
     
     background-color: $light-font;
+    transform: translateZ(1px);
+
     transform-style: preserve-3d;
     background-repeat: no-repeat;
     background-position: 50%;
@@ -143,3 +151,41 @@ $hand-circle-border: -15%;
   .concealed * {
     visibility: hidden;
   }
+
+  // .highlight::after {
+  //   position: absolute;
+  //   inset: 0 0 0 0;
+  //   content: "";
+  //   box-shadow: 0 0 80px 40px rgb(247, 255, 173);
+  //   border-radius: 50%;
+  //   transform: translateZ(-2px);
+  //   transform-style: preserve-3d;
+  // }
+
+  .highlight::before {
+    animation: highlight 1s ease-in-out infinite both;
+
+    position: absolute;
+    inset: 0 0 0 0;
+    content: "";
+    background-image: $highlight-gradient;
+    border-radius: 50%;
+    transform: translateZ(-105px);
+    transform-style: preserve-3d;
+  }
+
+  @keyframes highlight {
+    0% {
+      transform: scale(1.4);
+      opacity: 1;
+    }
+    80% {
+      transform: scale(2.5);
+      opacity: 0.1;
+    }
+    100% {
+      transform: scale(2.8);
+      opacity: 0;
+    }
+  }
+  

@@ -1,15 +1,18 @@
 import DefaultButton from './components/DefaultButton';
 import Footer from './components/Footer';
 import Header from './components/Header'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Step1 from './components/Step1';
 import Step2 from './components/Step2';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Rules from './components/Rules';
 
+function showRules() {
+  document.querySelector(".rules").classList.toggle("hidden");
+}
 function App() {
   const [choice, setChoice] = useState("");
   const [score, setScore] = useState(0);
-
   return (
     <div className="flex-column">
       <Header score={score} />
@@ -21,8 +24,8 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-
-      <DefaultButton text="rules" extraClass="rules-btn" />
+      <Rules />
+      <DefaultButton onClick={showRules} text="rules" extraClass="rules-btn" />
       <Footer />
     </div>
   );

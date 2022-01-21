@@ -28,6 +28,10 @@ $hand-circle-border: -15%;
   background-color: transparent;
 }
 
+button {
+  @include btn-reset();
+}
+
 .debug {
   background-color:darkblue !important;
 }
@@ -110,6 +114,27 @@ body,html {
 //   backdrop-filter: ;
 // }
 
+.rules {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+
+  position: fixed;
+  overflow: hidden;
+
+  top:0; right:0; bottom:0; left:0;
+  z-index: 1;
+
+  color: gray;
+
+  background-color: white;
+
+  filter: grayscale(100%);
+}
+
 .default-btn {
   @include btn-reset;
   @include default-border;
@@ -117,9 +142,11 @@ body,html {
   color: $light-font;
   font-size: 1.1em;
   font-weight: 500;
-  transform: translateZ(111px);
+  // transform: translateZ(111px);
 
-  transform-style: preserve-3d;}
+  // transform-style: preserve-3d;
+  // z-index: 100;
+}
 
 .attribution {
   font-size: 11px;
@@ -137,6 +164,7 @@ body,html {
   left: -9999vw;
   visibility: hidden;
 }
+
 
 @media only screen and (min-width:1024px) {
   .rules-btn {

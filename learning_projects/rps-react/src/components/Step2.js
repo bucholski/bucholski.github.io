@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import DefaultButton from './DefaultButton';
 import DuelContainer from './DuelContainer'
 
-
-
 const Step2 = ({ gesture, score, setScore }) => {
 
   const [reveal, setReveal] = useState (0);
@@ -13,11 +11,13 @@ const Step2 = ({ gesture, score, setScore }) => {
   const [playerMod, setPlayerMod] = useState ('');
   const [enemyMod, setEnemyMod] = useState ('concealed');
   const [playAgainBtn, setPlayAgainBtn] = useState ('hidden')
+
+
+
   function rollEnemy() {
     const gestures = ['paper', 'scissors', 'rock'];
     let i = Math.floor(Math.random() * 3);
     return gestures[i];
-    // return 'paper';
   }
 
   function unveilEnemy() {
@@ -32,11 +32,9 @@ const Step2 = ({ gesture, score, setScore }) => {
   }
 
   function selectWinner() {
-
     if (gesture == enemyChoice)  { 
       return('tie');
     } else if (gesture == 'rock' && enemyChoice == 'scissors' || gesture == 'paper' && enemyChoice == 'rock' || gesture == 'scissors' && enemyChoice == 'paper') {
-
       return('victory');
     } else if (gesture == 'paper' && enemyChoice == 'scissors' || gesture == 'scissors' && enemyChoice == 'rock' || gesture == 'rock' && enemyChoice == 'paper') {
       return('defeat');
@@ -61,7 +59,7 @@ const Step2 = ({ gesture, score, setScore }) => {
     setPlayerMod(()=>"highlight");
     }
     else if (outcome === 'defeat') { 
-    setScore(()=>score - 1);
+    setScore((score)=>score - 1);
     setEnemyMod(()=>"highlight");
     }
   },[outcome])

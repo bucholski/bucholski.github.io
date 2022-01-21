@@ -1,8 +1,8 @@
   import React from 'react'
   
-  const DefaultButton = ({text, extraClass}) => {
+  const DefaultButton = ({text, extraClass, onClick}) => {
     return (
-      <button className={`default-btn ${extraClass}`}>{text}</button>
+      <button onClick={onClick} className={`default-btn ${extraClass}`}>{text}</button>
     )
   }
   

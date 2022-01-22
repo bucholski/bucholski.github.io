@@ -8,7 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Rules from './components/Rules';
 
 function showRules() {
-  document.querySelector(".rules").classList.toggle("hidden");
+  document.querySelector(".rules__container").classList.toggle("hidden");
 }
 function App() {
   const [choice, setChoice] = useState("");

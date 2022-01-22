@@ -121,18 +121,24 @@ body,html {
   align-items: center;
   justify-content: space-around;
 
-
   position: fixed;
-  overflow: hidden;
-
   top:0; right:0; bottom:0; left:0;
-  z-index: 1;
+  z-index: 10;
 
-  color: gray;
-
+  color: $dark-font;
   background-color: white;
 
   filter: grayscale(100%);
+}
+
+.rules__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top:0; right:0; bottom:0; left:0;
+
+  
 }
 
 .default-btn {
@@ -170,6 +176,24 @@ body,html {
   .rules-btn {
     position: absolute;
     bottom: 50px; right: 50px;
+  }
+
+  .rules {
+    position: absolute;
+    top:40%; right:initial; bottom:initial; left:initial;
+
+    height: 400px;
+    width: 400px;
+    border-radius: 7px;
+    z-index: 10;
+  }
+
+
+  .rules__background {
+    position: fixed;
+    top:0; right:0; bottom:0; left:0;
+
+    background-color: rgba(0,0,0,0.5);
   }
 }
 

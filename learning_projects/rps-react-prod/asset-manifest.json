@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/learning_projects/rps-react-prod/static/css/main.496ada32.css",
-    "main.js": "/learning_projects/rps-react-prod/static/js/main.d1c9ce0d.js",
+    "main.css": "/learning_projects/rps-react-prod/static/css/main.cbdc3e6c.css",
+    "main.js": "/learning_projects/rps-react-prod/static/js/main.397bfc8b.js",
     "static/js/787.e6c92180.chunk.js": "/learning_projects/rps-react-prod/static/js/787.e6c92180.chunk.js",
     "static/media/logo.svg": "/learning_projects/rps-react-prod/static/media/logo.a4a2b39fefcdb6a1a8088c4dba8f3d93.svg",
     "static/media/image-rules.svg": "/learning_projects/rps-react-prod/static/media/image-rules.258b753fb6284dc8ae00c5b2fa7938c0.svg",
@@ -9,12 +9,12 @@
     "index.html": "/learning_projects/rps-react-prod/index.html",
     "static/media/icon-scissors.svg": "/learning_projects/rps-react-prod/static/media/icon-scissors.3b1a5d7eb0b2f1fd3e95.svg",
     "static/media/icon-rock.svg": "/learning_projects/rps-react-prod/static/media/icon-rock.476e90a9646a87bb3645.svg",
-    "main.496ada32.css.map": "/learning_projects/rps-react-prod/static/css/main.496ada32.css.map",
-    "main.d1c9ce0d.js.map": "/learning_projects/rps-react-prod/static/js/main.d1c9ce0d.js.map",
+    "main.cbdc3e6c.css.map": "/learning_projects/rps-react-prod/static/css/main.cbdc3e6c.css.map",
+    "main.397bfc8b.js.map": "/learning_projects/rps-react-prod/static/js/main.397bfc8b.js.map",
     "787.e6c92180.chunk.js.map": "/learning_projects/rps-react-prod/static/js/787.e6c92180.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.496ada32.css",
-    "static/js/main.d1c9ce0d.js"
+    "static/css/main.cbdc3e6c.css",
+    "static/js/main.397bfc8b.js"
   ]
 }

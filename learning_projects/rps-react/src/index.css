@@ -34,7 +34,7 @@
   height: clamp(100px, clamp(170px, 30vw, 238px) / 1.7, 140px);
   border-radius: 50%;
   box-shadow: inset 0 5px rgba(0, 0, 0, 0.2);
-  background-color: #FFF;
+  background-color: #fff;
   transform: translateZ(1px);
   transform-style: preserve-3d;
   background-repeat: no-repeat;
@@ -118,7 +118,7 @@
   position: absolute;
   inset: 0 0 0 0;
   content: "";
-  background-image: radial-gradient(circle, rgba(224, 255, 232, 0.1), rgba(255, 255, 224, 0.1) 45%, rgba(255, 255, 224, 0.06) 45%, rgba(255, 255, 224, 0.06) 58%, rgba(255, 255, 224, 0.03) 58%, rgba(255, 255, 224, 0.03) 100%);
+  background-image: radial-gradient(circle, rgba(224, 255, 232, 0.15), rgba(255, 255, 224, 0.15) 45%, rgba(255, 255, 224, 0.08) 45%, rgba(255, 255, 224, 0.08) 58%, rgba(255, 255, 224, 0.05) 58%, rgba(255, 255, 224, 0.05) 100%);
   border-radius: 50%;
   transform: translateZ(-1px);
   transform-style: preserve-3d;
@@ -159,14 +159,15 @@ a {
   text-decoration: none;
 }
 
-body, html {
+body,
+html {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
   height: 100%;
   background-image: radial-gradient(circle at top, #1f3756, #141539);
   background-position: left;
-  color: #FFF;
+  color: #fff;
 }
 
 #root {
@@ -177,6 +178,7 @@ body, html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: flex-start;
   justify-content: space-between;
   min-height: calc(clamp(100px, clamp(170px, 30vw, 238px) / 1.7, 140px) * 6);
   height: 100%;
@@ -205,7 +207,7 @@ body, html {
 
 .title-box__scoreboard {
   padding: 8px calc(15px + 2vw);
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 8px;
   color: #3b4363;
   text-align: center;
@@ -258,9 +260,11 @@ body, html {
   border: solid 3px #606e85;
   border-radius: 8px;
   padding: 10px 40px;
-  color: #FFF;
+  color: #fff;
   font-size: 1.1em;
   font-weight: 500;
+  min-width: 100px;
+  max-width: 300px;
 }
 
 .attribution {
@@ -269,7 +273,8 @@ body, html {
   padding: 5px 0;
 }
 
-.attribution a, .attribution a:visited {
+.attribution a,
+.attribution a:visited {
   text-decoration: none;
   color: #7a8acd;
 }
@@ -280,6 +285,32 @@ body, html {
   visibility: hidden;
 }
 
+.again-btn {
+  white-space: nowrap;
+}
+
+@media only screen and (max-width: 1023px) {
+  .duel-container {
+    flex-wrap: wrap;
+  }
+
+  .again-container {
+    order: 3;
+  }
+
+  .duel-container::after {
+    content: "";
+    margin: 0 500px;
+  }
+
+  .again-btn.hidden-btn {
+    height: 0px;
+    padding: 0;
+    margin: 0 50px;
+    border: none;
+    overflow: hidden;
+  }
+}
 @media only screen and (min-width: 1024px) {
   .rules-btn {
     position: absolute;
@@ -288,6 +319,7 @@ body, html {
   }
 
   .rules {
+    flex-flow: row wrap;
     position: absolute;
     top: 40%;
     right: initial;
@@ -299,6 +331,19 @@ body, html {
     z-index: 10;
   }
 
+  .rules__exit {
+    order: -1;
+  }
+
+  .rules__graph {
+    padding-bottom: 20px;
+  }
+
+  .rules__header {
+    order: -2;
+    padding-right: 150px;
+  }
+
   .rules__background {
     position: fixed;
     top: 0;
@@ -306,6 +351,21 @@ body, html {
     bottom: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .again-btn {
+    transition: all 0.5s ease, transform 0.2s ease;
+  }
+
+  .again-btn.hidden-btn {
+    overflow: hidden;
+    min-width: 0px;
+    max-width: 0px;
+    padding-left: 0;
+    border: 0px;
+    padding-right: 0;
+    letter-spacing: -8px;
+    margin: 0;
   }
 }
 

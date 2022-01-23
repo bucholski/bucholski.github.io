@@ -10,9 +10,11 @@ const Step2 = ({ gesture, score, setScore }) => {
   const [outcome, setOutcome] = useState ('');
   const [playerMod, setPlayerMod] = useState ('');
   const [enemyMod, setEnemyMod] = useState ('concealed');
-  const [playAgainBtn, setPlayAgainBtn] = useState ('hidden')
 
-
+  function showAgainBtn() {
+    console.log("this is happening too quickly")
+    document.querySelector('.again-btn').classList.remove('hidden-btn');
+  }
 
   function rollEnemy() {
     const gestures = ['paper', 'scissors', 'rock'];
@@ -25,8 +27,8 @@ const Step2 = ({ gesture, score, setScore }) => {
       setTimeout(() => {
       setEnemyMod(('')); 
       setReveal(1);
-      setPlayAgainBtn('');
-
+      // setPlayAgainBtn('');
+      showAgainBtn();
       }, 1000 )
     }
   }
@@ -40,7 +42,7 @@ const Step2 = ({ gesture, score, setScore }) => {
       return('defeat');
     }
   }
-
+ 
   useEffect(() => {
     setEnemyChoice(rollEnemy);
   },[])
@@ -67,11 +69,8 @@ const Step2 = ({ gesture, score, setScore }) => {
 
 return (
     <>
-      <h1>{outcome}</h1>
+      {/* <h1>{outcome}</h1> */}
       <DuelContainer gesture={gesture} enemyChoice={enemyChoice} playerMod={playerMod} enemyMod={enemyMod} />
-      <Link to="./..">  
-       <DefaultButton text="Play again" extraClass={`again-btn ${playAgainBtn}`} />
-      </Link>
     </>
   )
 }

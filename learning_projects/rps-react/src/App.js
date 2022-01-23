@@ -7,9 +7,7 @@ import Step2 from './components/Step2';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Rules from './components/Rules';
 
-function showRules() {
-  document.querySelector(".rules__container").classList.toggle("hidden");
-}
+
 function App() {
   const [choice, setChoice] = useState("");
   const [score, setScore] = useState(0);
@@ -25,7 +23,6 @@ function App() {
         </Routes>
       </BrowserRouter>
       <Rules />
-      <DefaultButton onClick={showRules} text="rules" extraClass="rules-btn" />
       <Footer />
     </div>
   );

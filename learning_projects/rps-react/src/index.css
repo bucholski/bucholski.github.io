@@ -225,6 +225,10 @@ html {
   font-weight: 700;
 }
 
+.rules-btn {
+  margin: 20px auto;
+}
+
 .rules {
   flex-shrink: 0;
   display: flex;
@@ -265,6 +269,8 @@ html {
   font-weight: 500;
   min-width: 100px;
   max-width: 300px;
+  min-height: 20px;
+  max-height: 60px;
 }
 
 .attribution {
@@ -303,11 +309,18 @@ html {
     margin: 0 500px;
   }
 
+  .again-btn {
+    transition: all 0.2s ease;
+  }
+
   .again-btn.hidden-btn {
-    height: 0px;
+    overflow: hidden;
+    min-height: 0px;
+    max-height: 0px;
     padding: 0;
-    margin: 0 50px;
+    margin: 0;
     border: none;
+    transform: scale(0);
     overflow: hidden;
   }
 }
@@ -354,7 +367,7 @@ html {
   }
 
   .again-btn {
-    transition: all 0.5s ease, transform 0.2s ease;
+    transition: all 0.2s ease, transform 0.2s ease;
   }
 
   .again-btn.hidden-btn {

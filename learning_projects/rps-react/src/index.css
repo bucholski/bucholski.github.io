@@ -309,6 +309,9 @@ html {
 
 .again-btn {
   white-space: nowrap;
+  background-color: #fff;
+  color: #3b4363;
+  border-color: #fff;
 }
 
 .outcome-text {

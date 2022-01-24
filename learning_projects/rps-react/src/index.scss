@@ -198,6 +198,9 @@ html {
 
 .again-btn {
   white-space: nowrap;
+  background-color: $light-font;
+  color: $dark-font;
+  border-color: $light-font;
 }
 
 .outcome-text {

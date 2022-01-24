@@ -6,7 +6,6 @@ This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](h
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -29,18 +28,6 @@ Users should be able to:
 - Maintain the state of the score after refreshing the browser _(optional)_
 - **Bonus**: Play Rock, Paper, Scissors, Lizard, Spock against the computer _(optional)_
 
-### Screenshot
-
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
 ### Links
 
 - Solution URL: [Add solution URL here]()
@@ -58,33 +45,24 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-After trying to reinvent the wheel for at least an hour, I learned that translating and rotating elements in CSS is somewhat similar to commanding LOGO turtles.
-
 Of course, the main point of this project was learning a framework. I decided to go with React and I think it allowed me to grasp the basics of it, as I successfully worked with components, props, state and effect hooks.
+
+Learning some npm basics was useful as well. Managed to overwrite my repo in the process, but got everything back fortunately.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Using React was fun, I look forward to learning it more in depth in the forthcoming projects.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [React JS Crash Course by Traversy Media](https://www.youtube.com/watch?v=w7ejDZ8SWv8&) - I really enjoy Brad's way of teaching. It helped me to understand all the basics.
+- [React Hooks by Web Dev Simplified](https://www.youtube.com/watch?v=O6P86uwfdR0&list=PLZlA0Gpn_vH8EtggFGERCwMY5u5hOjf-h) - Now, after Brad's tutorial I needed some more knowledge on Hooks and Kyle from Web Dev Simplified did deliver.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Website - [Add your name here](https://bucholski.github.io/)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/bucholski)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Huge thanks to CSS-tricks, Traversy Media, Kyle from Web Dev Simplified and of course many users of Stack Overflow

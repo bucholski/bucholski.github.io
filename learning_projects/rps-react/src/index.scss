@@ -147,11 +147,10 @@ html {
 
   color: $dark-font;
   background-color: white;
-
-  filter: grayscale(100%);
 }
 
 .rules__container {
+  opacity: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -194,10 +193,33 @@ html {
   position: absolute;
   left: -9999vw;
   visibility: hidden;
+  opacity: 0;
 }
 
 .again-btn {
   white-space: nowrap;
+}
+
+.outcome-text {
+  min-width: 10px;
+  max-width: 290px;
+  padding-bottom: 20px;
+  font-size: 2.5em;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.outcome-text--hidden {
+  min-width: 0;
+  max-width: 0;
+  // height: 0;
+  // overflow: hidden;
+  // padding: 0;
+  // margin: 0;
+  transform: scaleX(0);
+  letter-spacing: -5px;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -227,14 +249,13 @@ html {
     margin: 0;
     border: none;
     transform: scale(0);
-    overflow: hidden;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .rules-btn {
     position: absolute;
-    bottom: 50px;
+    bottom: 20px;
     right: 50px;
   }
 

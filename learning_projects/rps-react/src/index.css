@@ -102,14 +102,22 @@
   flex-shrink: 0;
 }
 
+.hand-circle__label {
+  position: relative;
+  top: 100%;
+  color: #fff;
+  font-size: 1.2em;
+  white-space: nowrap;
+  letter-spacing: 2px;
+}
+
 .concealed {
-  opacity: 0.5;
-  background-color: #141539;
+  background-color: rgba(20, 21, 57, 0.5);
   background-image: none;
   box-shadow: none;
 }
 
-.concealed * {
+.concealed .hand-circle__border {
   visibility: hidden;
 }
 
@@ -124,6 +132,13 @@
   transform-style: preserve-3d;
 }
 
+@media only screen and (min-width: 1024px) {
+  .hand-circle__label {
+    top: initial;
+    bottom: 100%;
+    font-size: 1.4em;
+  }
+}
 @keyframes highlight {
   0% {
     transform: scale(1);
@@ -243,10 +258,10 @@ html {
   z-index: 10;
   color: #3b4363;
   background-color: white;
-  filter: grayscale(100%);
 }
 
 .rules__container {
+  opacity: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -289,10 +304,29 @@ html {
   position: absolute;
   left: -9999vw;
   visibility: hidden;
+  opacity: 0;
 }
 
 .again-btn {
   white-space: nowrap;
+}
+
+.outcome-text {
+  min-width: 10px;
+  max-width: 290px;
+  padding-bottom: 20px;
+  font-size: 2.5em;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.outcome-text--hidden {
+  min-width: 0;
+  max-width: 0;
+  transform: scaleX(0);
+  letter-spacing: -5px;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -321,13 +355,12 @@ html {
     margin: 0;
     border: none;
     transform: scale(0);
-    overflow: hidden;
   }
 }
 @media only screen and (min-width: 1024px) {
   .rules-btn {
     position: absolute;
-    bottom: 50px;
+    bottom: 20px;
     right: 50px;
   }
 

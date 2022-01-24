@@ -14,6 +14,7 @@ const Step2 = ({ gesture, score, setScore }) => {
   function showAgainBtn() {
     console.log("this is happening too quickly")
     document.querySelector('.again-btn').classList.remove('hidden-btn');
+    document.querySelector('.outcome-text').classList.remove('outcome-text--hidden');
   }
 
   function rollEnemy() {
@@ -70,7 +71,7 @@ const Step2 = ({ gesture, score, setScore }) => {
 return (
     <>
       {/* <h1>{outcome}</h1> */}
-      <DuelContainer gesture={gesture} enemyChoice={enemyChoice} playerMod={playerMod} enemyMod={enemyMod} />
+      <DuelContainer gesture={gesture} enemyChoice={enemyChoice} playerMod={playerMod} enemyMod={enemyMod} outcome={outcome} />
     </>
   )
 }

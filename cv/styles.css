@@ -1,0 +1,87 @@
+body,
+html {
+  margin: 0;
+  font-family: sans-serif;
+  width: 210mm;
+  height: 297mm;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #aaf;
+}
+
+.flex-container {
+  display: flex;
+  height: 100%;
+}
+
+.essentials-column {
+  color: white;
+  height: 100%;
+  background-color: #445;
+}
+
+.content {
+  margin: 5px;
+  padding: 5px;
+}
+
+.content__subtitle {
+  line-height: 2em;
+  font-weight: bold;
+}
+
+.title {
+  padding: 0 5px;
+  background-color: #223;
+}
+
+.sidenote {
+  text-align: right;
+  margin-right: 15px;
+  font-size: 0.9em;
+}
+
+.skill-container {
+  margin: 5px auto;
+  height: 10px;
+  width: 90%;
+  border-radius: 1px;
+  background-color: #223;
+}
+
+.skill {
+  height: 100%;
+  background-color: white;
+}
+
+.skill--html,
+.skill--css,
+.skill--english {
+  width: 85%;
+}
+
+.skill--js,
+.skill--rwd {
+  width: 75%;
+}
+
+.skill--git,
+.skill--russian,
+.skill--react {
+  width: 50%;
+}
+
+/*# sourceMappingURL=styles.css.map */

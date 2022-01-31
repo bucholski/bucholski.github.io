@@ -1,5 +1,10 @@
-body,
-html {
+$dark-background: #445;
+$darker-background: #223;
+$light-font: #eee;
+$light-link-color: #aaf;
+$dark-font: $darker-background;
+
+body {
   margin: 0;
   font-family: sans-serif;
   width: 210mm;
@@ -19,7 +24,7 @@ a {
 }
 
 a:visited {
-  color: #aaf;
+  color: $light-link-color;
 }
 
 .flex-container {
@@ -28,9 +33,11 @@ a:visited {
 }
 
 .essentials-column {
+  flex-shrink: 0;
   color: white;
   height: 100%;
-  background-color: #445;
+  background-color: $dark-background;
+  width: 33%;
 }
 
 .content {
@@ -43,9 +50,9 @@ a:visited {
   font-weight: bold;
 }
 
-.title {
+.essentials-column .title {
   padding: 0 5px;
-  background-color: #223;
+  background-color: $darker-background;
 }
 
 .sidenote {
@@ -56,11 +63,11 @@ a:visited {
 
 .skill-container {
   margin: 5px auto;
-  height: 10px;
+  height: 7px;
   width: 90%;
 
   border-radius: 1px;
-  background-color: #223;
+  background-color: $darker-background;
 }
 
 .skill {
@@ -74,13 +81,46 @@ a:visited {
   width: 85%;
 }
 
-.skill--js,
 .skill--rwd {
   width: 75%;
 }
 
-.skill--git,
-.skill--russian,
-.skill--react {
+.skill--js {
+  width: 65%;
+}
+
+.skill--russian {
   width: 50%;
+}
+
+.skill--git,
+.skill--react {
+  width: 35%;
+}
+
+.verbose-column {
+  margin: 0 15px;
+  // border: 1px solid gray;
+  line-height: 1.6em;
+  color: $dark-font;
+}
+
+.verbose-column .title {
+  border-top: 1px solid rgb(207, 185, 185);
+  border-bottom: 1px solid lightgray;
+  margin: 20px 0;
+}
+
+.verbose-column .subtitle {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.verbose-column .entry {
+  margin: 20px 0 20px 50px;
+}
+
+.entry p {
+  margin: 0;
 }

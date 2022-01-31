@@ -1,6 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Lato", sans-serif;
   width: 210mm;
   height: 297mm;
 }
@@ -28,10 +29,15 @@ a:visited {
 
 .essentials-column {
   flex-shrink: 0;
-  color: white;
   height: 100%;
-  background-color: #445;
   width: 33%;
+  background-color: #556;
+  color: white;
+  font-size: 15px;
+}
+
+.essentials-column .entry {
+  margin-bottom: 10px;
 }
 
 .content {
@@ -46,7 +52,7 @@ a:visited {
 
 .essentials-column .title {
   padding: 0 5px;
-  background-color: #223;
+  background-color: #334;
 }
 
 .sidenote {
@@ -60,7 +66,7 @@ a:visited {
   height: 7px;
   width: 90%;
   border-radius: 1px;
-  background-color: #223;
+  background-color: #334;
 }
 
 .skill {
@@ -94,7 +100,7 @@ a:visited {
 .verbose-column {
   margin: 0 15px;
   line-height: 1.6em;
-  color: #223;
+  color: #334;
 }
 
 .verbose-column .title {
@@ -113,7 +119,7 @@ a:visited {
   margin: 20px 0 20px 50px;
 }
 
-.entry p {
+.verbose-column .entry p {
   margin: 0;
 }
 

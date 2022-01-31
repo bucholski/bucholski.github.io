@@ -1,12 +1,14 @@
-$dark-background: #445;
-$darker-background: #223;
+$dark-background: #556;
+$darker-background: #334;
 $light-font: #eee;
 $light-link-color: #aaf;
 $dark-font: $darker-background;
 
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
+
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Lato", sans-serif;
   width: 210mm;
   height: 297mm;
 }
@@ -34,10 +36,15 @@ a:visited {
 
 .essentials-column {
   flex-shrink: 0;
-  color: white;
   height: 100%;
-  background-color: $dark-background;
   width: 33%;
+  background-color: $dark-background;
+  color: white;
+  font-size: 15px;
+}
+
+.essentials-column .entry {
+  margin-bottom: 10px;
 }
 
 .content {
@@ -121,6 +128,6 @@ a:visited {
   margin: 20px 0 20px 50px;
 }
 
-.entry p {
+.verbose-column .entry p {
   margin: 0;
 }

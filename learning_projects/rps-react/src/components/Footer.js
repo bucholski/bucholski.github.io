@@ -13,7 +13,7 @@ const Footer = () => {
     <div className="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       <br/>
-      Coded by <a href="#">Misha Bucholski</a>.
+      Coded by <a href="https://bucholski.github.io">Misha Bucholski</a>.
     </div>
   </footer>
   )

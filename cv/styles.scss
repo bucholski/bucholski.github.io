@@ -1,7 +1,7 @@
 $dark-background: #556;
 $darker-background: #334;
 $light-font: #eee;
-$light-link-color: #aaf;
+$light-link-color: rgb(0, 217, 255);
 $dark-font: $darker-background;
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
@@ -98,7 +98,7 @@ a:visited {
 }
 
 .skill--js {
-  width: 65%;
+  width: 55%;
 }
 
 .skill--russian {
@@ -141,4 +141,9 @@ a:visited {
   margin-top: 300px;
   font-size: 10px;
   line-height: 1em;
+}
+
+svg {
+  height: 0.8em;
+  fill: $light-link-color;
 }
